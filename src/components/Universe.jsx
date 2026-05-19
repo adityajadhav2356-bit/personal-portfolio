@@ -13,59 +13,62 @@ const Universe = () => {
     canvas.width = width;
     canvas.height = height;
 
-    const stars = [];
-    const numStars = 800; // lots of stars for a dense universe
+    const shapes = [];
+    const numShapes = 45; // Subtle floating objects
 
-    for (let i = 0; i < numStars; i++) {
-      stars.push({
-        x: Math.random() * width * 2 - width,
-        y: Math.random() * height * 2 - height,
-        z: Math.random() * 2000,
+    const colors = [
+      'rgba(148, 163, 184, 0.3)', // slate-400
+      'rgba(99, 102, 241, 0.2)',  // indigo-500
+      'rgba(156, 163, 175, 0.25)' // gray-400
+    ];
+
+    // Initialize shapes
+    for (let i = 0; i < numShapes; i++) {
+      shapes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        size: Math.random() * 35 + 15,
+        vx: (Math.random() - 0.5) * 0.8,
+        vy: (Math.random() - 0.5) * 0.8,
+        rotation: Math.random() * Math.PI * 2,
+        vRot: (Math.random() - 0.5) * 0.015,
+        sides: Math.floor(Math.random() * 3) + 3, // Triangles, squares, pentagons
+        color: colors[Math.floor(Math.random() * colors.length)]
       });
     }
 
-    const draw = () => {
-      // Clear canvas with a slight trail effect (slate-50 color)
-      ctx.fillStyle = 'rgba(248, 250, 252, 0.4)'; 
-      ctx.fillRect(0, 0, width, height);
-
-      const centerX = width / 2;
-      const centerY = height / 2;
-
-      for (let i = 0; i < numStars; i++) {
-        let star = stars[i];
-        
-        star.z -= 4; // speed of moving through the universe
-
-        if (star.z <= 0) {
-          star.x = Math.random() * width * 2 - width;
-          star.y = Math.random() * height * 2 - height;
-          star.z = 2000;
-        }
-
-        const k = 256.0 / star.z;
-        const px = star.x * k + centerX;
-        const py = star.y * k + centerY;
-
-        if (px >= 0 && px <= width && py >= 0 && py <= height) {
-          const size = (1 - star.z / 2000) * 3;
-          const opacity = 1 - star.z / 2000;
-          
-          ctx.beginPath();
-          ctx.arc(px, py, size, 0, Math.PI * 2);
-          
-          // Color mix of indigo and purple for light theme
-          if (i % 3 === 0) {
-            ctx.fillStyle = `rgba(168, 85, 247, ${opacity})`; // purple-500
-          } else if (i % 3 === 1) {
-            ctx.fillStyle = `rgba(59, 130, 246, ${opacity})`; // blue-500
-          } else {
-            ctx.fillStyle = `rgba(99, 102, 241, ${opacity})`; // indigo-500
-          }
-          
-          ctx.fill();
-        }
+    const drawPolygon = (ctx, x, y, radius, sides, rotation) => {
+      ctx.beginPath();
+      for (let i = 0; i < sides; i++) {
+        const angle = rotation + (i * 2 * Math.PI) / sides;
+        const px = x + radius * Math.cos(angle);
+        const py = y + radius * Math.sin(angle);
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
       }
+      ctx.closePath();
+    };
+
+    const draw = () => {
+      ctx.clearRect(0, 0, width, height);
+
+      shapes.forEach(shape => {
+        shape.x += shape.vx;
+        shape.y += shape.vy;
+        shape.rotation += shape.vRot;
+
+        // Wrap around screen edges smoothly
+        if (shape.x < -shape.size * 2) shape.x = width + shape.size * 2;
+        if (shape.x > width + shape.size * 2) shape.x = -shape.size * 2;
+        if (shape.y < -shape.size * 2) shape.y = height + shape.size * 2;
+        if (shape.y > height + shape.size * 2) shape.y = -shape.size * 2;
+
+        drawPolygon(ctx, shape.x, shape.y, shape.size, shape.sides, shape.rotation);
+        
+        ctx.strokeStyle = shape.color;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      });
 
       animationFrameId = window.requestAnimationFrame(draw);
     };
@@ -90,7 +93,7 @@ const Universe = () => {
   return (
     <canvas 
       ref={canvasRef} 
-      className="fixed inset-0 z-0 pointer-events-none opacity-80"
+      className="fixed inset-0 z-0 pointer-events-none opacity-60"
     />
   );
 };

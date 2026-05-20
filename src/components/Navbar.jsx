@@ -38,12 +38,12 @@ const Navbar = ({ scrollY }) => {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'py-4 glassmorphism-dark border-b border-slate-200' : 'py-6 bg-transparent'
+        isScrolled ? 'py-4 glassmorphism-dark border-b border-slate-800' : 'py-6 bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent bg-300% animate-gradient-x">
+        <a href="#" className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-accent-400 via-accent-400 to-accent-400 bg-clip-text text-transparent bg-300% animate-gradient-x">
           Aaditya.
         </a>
 
@@ -54,8 +54,8 @@ const Navbar = ({ scrollY }) => {
               <li key={link.name}>
                 <a 
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-indigo-400 ${
-                    activeSection === link.name.toLowerCase() ? 'text-indigo-400' : 'text-slate-700'
+                  className={`text-sm font-medium transition-colors hover:text-accent-400 ${
+                    activeSection === link.name.toLowerCase() ? 'text-accent-400' : 'text-slate-300'
                   }`}
                 >
                   {link.name}
@@ -64,21 +64,21 @@ const Navbar = ({ scrollY }) => {
             ))}
           </ul>
           
-          <div className="flex items-center space-x-4 pl-8 border-l border-slate-300">
-            <a href="https://github.com/adityajadhav2356-bit" target="_blank" rel="noreferrer" className="text-slate-600 hover:text-slate-900 transition-colors">
+          <div className="flex items-center space-x-4 pl-8 border-l border-slate-700">
+            <a href="https://github.com/adityajadhav2356-bit" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-50 transition-colors">
               <FaGithub size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/aaditya-jadhav-0077b5387/" target="_blank" rel="noreferrer" className="text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="https://www.linkedin.com/in/aaditya-jadhav-0077b5387/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-50 transition-colors">
               <FaLinkedin size={20} />
             </a>
-            <a href="https://www.instagram.com/adi.21725/" target="_blank" rel="noreferrer" className="text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="https://www.instagram.com/adi.21725/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-50 transition-colors">
               <FaInstagram size={20} />
             </a>
             <a 
               href="https://drive.google.com/file/d/1pev3oVbj98UKjYfAFc01fIegTSElKz6y/view?usp=drivesdk" 
               target="_blank" 
               rel="noreferrer" 
-              className="hidden lg:flex items-center space-x-2 bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-full font-medium transition-all ml-4 text-sm shadow-[0_0_15px_rgba(99,102,241,0.5)]"
+              className="hidden lg:flex items-center space-x-2 bg-accent-500 hover:bg-accent-600 text-slate-950 px-4 py-2 rounded-full font-medium transition-all ml-4 text-sm shadow-[0_0_15px_rgba(0,229,153,0.5)]"
             >
               <Download size={16} />
               <span>Resume</span>
@@ -88,7 +88,7 @@ const Navbar = ({ scrollY }) => {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-slate-700 hover:text-slate-900 focus:outline-none"
+          className="md:hidden text-slate-300 hover:text-slate-50 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -102,7 +102,7 @@ const Navbar = ({ scrollY }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glassmorphism-dark border-t border-slate-200"
+            className="md:hidden glassmorphism-dark border-t border-slate-800"
           >
             <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
               {navLinks.map((link) => (
@@ -110,31 +110,31 @@ const Navbar = ({ scrollY }) => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-slate-700 hover:text-indigo-400 py-2 text-lg font-medium border-b border-slate-200"
+                  className="text-slate-300 hover:text-accent-400 py-2 text-lg font-medium border-b border-slate-800"
                 >
                   {link.name}
                 </a>
               ))}
               <div className="flex space-x-6 pt-4">
-                <a href="https://github.com/adityajadhav2356-bit" className="text-slate-600 hover:text-slate-900">
+                <a href="https://github.com/adityajadhav2356-bit" className="text-slate-400 hover:text-slate-50">
                   <FaGithub size={24} />
                 </a>
-                <a href="https://www.linkedin.com/in/aaditya-jadhav-0077b5387/" className="text-slate-600 hover:text-slate-900">
+                <a href="https://www.linkedin.com/in/aaditya-jadhav-0077b5387/" className="text-slate-400 hover:text-slate-50">
                   <FaLinkedin size={24} />
                 </a>
-                <a href="https://www.instagram.com/adi.21725/" className="text-slate-600 hover:text-slate-900">
+                <a href="https://www.instagram.com/adi.21725/" className="text-slate-400 hover:text-slate-50">
                   <FaInstagram size={24} />
                 </a>
-                <a href="mailto:adityajadhav2356@gmail.com" className="text-slate-600 hover:text-slate-900">
+                <a href="mailto:adityajadhav2356@gmail.com" className="text-slate-400 hover:text-slate-50">
                   <Mail size={24} />
                 </a>
               </div>
-              <div className="pt-4 border-t border-slate-200">
+              <div className="pt-4 border-t border-slate-800">
                 <a 
                   href="https://drive.google.com/file/d/1pev3oVbj98UKjYfAFc01fIegTSElKz6y/view?usp=drivesdk" 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="flex items-center justify-center space-x-2 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-full font-medium transition-all w-full shadow-[0_0_15px_rgba(99,102,241,0.5)]"
+                  className="flex items-center justify-center space-x-2 bg-accent-500 hover:bg-accent-600 text-slate-950 px-6 py-3 rounded-full font-medium transition-all w-full shadow-[0_0_15px_rgba(0,229,153,0.5)]"
                 >
                   <Download size={18} />
                   <span>Download Resume</span>

@@ -66,9 +66,9 @@ const TerminalBio = () => {
   };
 
   return (
-    <div id="terminal-bio" className="w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white group">
+    <div id="terminal-bio" className="w-full rounded-2xl overflow-hidden shadow-[0_0_20px_rgba(0,229,153,0.1)] border border-slate-800 bg-slate-900 group">
       {/* Terminal Header */}
-      <div className="bg-slate-100 px-4 py-3 flex items-center border-b border-slate-200 transition-colors group-hover:bg-indigo-50">
+      <div className="bg-slate-900 px-4 py-3 flex items-center border-b border-slate-800 transition-colors group-hover:bg-slate-800">
         <div className="flex space-x-2">
           <div className="w-3 h-3 rounded-full bg-red-400 shadow-[0_0_8px_rgba(248,113,113,0.6)]"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.6)]"></div>
@@ -80,7 +80,7 @@ const TerminalBio = () => {
       </div>
       
       {/* Terminal Body */}
-      <div className="p-6 h-64 bg-slate-900 text-green-400 font-mono text-sm sm:text-base overflow-y-auto">
+      <div className="p-6 h-64 bg-slate-50 text-green-400 font-mono text-sm sm:text-base overflow-y-auto">
         <pre className="whitespace-pre-wrap leading-relaxed font-mono">
           {text}
           {isTyping && <motion.span 

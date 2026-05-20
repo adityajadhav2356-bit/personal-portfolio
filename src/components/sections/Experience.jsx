@@ -23,7 +23,7 @@ const Experience = () => {
       organization: "Smart India Hackathon (SIH)",
       date: "November 2025",
       description: "Cleared the institute-level Smart India Hackathon, demonstrating strong teamwork and capability to build impactful solutions.",
-      icon: <Award className="text-purple-400" size={20} />
+      icon: <Award className="text-accent-400" size={20} />
     },
     {
       title: "Contributor and Ambassador",
@@ -49,7 +49,7 @@ const Experience = () => {
       title: "PR Coordinator",
       organization: "Google Developer Group (GDG) on Campus RSCOE",
       description: "Coordinating public relations and outreach strategies to build a strong community of developers and tech enthusiasts.",
-      icon: <Users className="text-indigo-400" size={20} />
+      icon: <Users className="text-accent-400" size={20} />
     }
   ];
 
@@ -64,11 +64,11 @@ const Experience = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="flex items-center space-x-4 mb-16 justify-end">
-            <div className="flex-1 h-[1px] bg-gradient-to-l from-indigo-500/50 to-transparent"></div>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 text-right">Experience & Achievements</h2>
+            <div className="flex-1 h-[1px] bg-gradient-to-l from-accent-500/50 to-transparent"></div>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-50 text-right">Experience & Achievements</h2>
           </div>
 
-          <div className="relative border-l border-indigo-500/30 ml-4 md:ml-8 space-y-12">
+          <div className="relative border-l border-accent-500/30 ml-4 md:ml-8 space-y-12">
             {experiences.map((exp, index) => (
               <motion.div 
                 key={index}
@@ -79,24 +79,24 @@ const Experience = () => {
                 className="relative pl-8 md:pl-12"
               >
                 {/* Timeline dot */}
-                <div className="absolute -left-[21px] top-1 h-10 w-10 rounded-full glassmorphism-dark flex items-center justify-center border-2 border-indigo-500 z-10">
+                <div className="absolute -left-[21px] top-1 h-10 w-10 rounded-full glassmorphism-dark flex items-center justify-center border-2 border-accent-500 z-10">
                   {exp.icon}
                 </div>
 
-                <div className="glassmorphism-dark p-6 md:p-8 rounded-2xl border border-slate-200 hover:border-indigo-500/30 transition-colors">
+                <div className="glassmorphism-dark p-6 md:p-8 rounded-2xl border border-slate-800 hover:border-accent-500/30 transition-colors">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900">{exp.title}</h3>
-                      <h4 className="text-indigo-400 font-medium">{exp.organization}</h4>
+                      <h3 className="text-xl font-bold text-slate-50">{exp.title}</h3>
+                      <h4 className="text-accent-400 font-medium">{exp.organization}</h4>
                     </div>
                     {exp.date && (
-                      <div className="flex items-center text-slate-500 text-sm mt-2 md:mt-0 bg-slate-900/5 px-3 py-1 rounded-full w-max">
+                      <div className="flex items-center text-slate-500 text-sm mt-2 md:mt-0 bg-slate-50/5 px-3 py-1 rounded-full w-max">
                         <Calendar size={14} className="mr-2" />
                         {exp.date}
                       </div>
                     )}
                   </div>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-slate-400 leading-relaxed">
                     {exp.description}
                   </p>
                 </div>

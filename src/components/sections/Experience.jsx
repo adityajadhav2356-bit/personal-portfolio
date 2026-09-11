@@ -40,10 +40,10 @@ const Experience = () => {
       icon: <Trophy className="text-yellow-400" size={20} />
     },
     {
-      title: "Nominee — Z Skill Up Award",
-      organization: "Z Skill Institute",
+      title: "College-Level Nominee — Best Student",
+      organization: "Z Skill Up Award (JSPM's Rajarshi Shahu College of Engineering)",
       date: "2026",
-      description: "Nominated for the prestigious Z Skill Up Award by Z Skill Institute for dedication to continuous skill building.",
+      description: "Nominated at the college level from JSPM's Rajarshi Shahu College of Engineering for the Best Student Award in recognition of academic and technical excellence.",
       icon: <Award className="text-orange-400" size={20} />
     },
     {

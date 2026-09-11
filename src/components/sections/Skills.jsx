@@ -7,28 +7,58 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "C++", level: 90 },
-        { name: "Java", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "JavaScript", level: 90 }
+        { name: "Java", level: 90 },
+        { name: "C++", level: 85 },
+        { name: "C", level: 80 },
+        { name: "JavaScript", level: 90 },
+        { name: "TypeScript", level: 85 }
       ]
     },
     {
-      title: "Web Development",
+      title: "Backend Development",
       skills: [
-        { name: "React", level: 85 },
-        { name: "Node.js", level: 75 },
-        { name: "Express.js", level: 75 },
-        { name: "MongoDB", level: 80 }
+        { name: "Spring Boot", level: 85 },
+        { name: "Spring MVC", level: 85 },
+        { name: "JPA & Hibernate", level: 80 },
+        { name: "REST APIs", level: 90 },
+        { name: "Node.js & Express.js", level: 85 }
       ]
     },
     {
-      title: "Tools & Platforms",
+      title: "Frontend Development",
       skills: [
-        { name: "Git & GitHub", level: 85 },
-        { name: "VS Code", level: 90 },
-        { name: "Firebase", level: 80 },
-        { name: "Figma", level: 75 }
+        { name: "React.js", level: 90 },
+        { name: "Next.js", level: 85 },
+        { name: "HTML5 & CSS3", level: 95 },
+        { name: "Tailwind CSS", level: 90 }
+      ]
+    },
+    {
+      title: "Databases",
+      skills: [
+        { name: "MySQL", level: 85 },
+        { name: "PostgreSQL", level: 80 },
+        { name: "MongoDB", level: 85 },
+        { name: "Firebase & Supabase", level: 85 }
+      ]
+    },
+    {
+      title: "Core Computer Science",
+      skills: [
+        { name: "Data Structures & Algorithms (DSA)", level: 85 },
+        { name: "Object-Oriented Programming (OOP)", level: 90 },
+        { name: "Database Management Systems (DBMS)", level: 85 },
+        { name: "Operating Systems (OS)", level: 80 },
+        { name: "Computer Networks", level: 80 }
+      ]
+    },
+    {
+      title: "Tools & Cloud",
+      skills: [
+        { name: "Git & GitHub", level: 90 },
+        { name: "Postman", level: 85 },
+        { name: "Google Cloud (GCP) & Cloud Run", level: 80 },
+        { name: "Firebase", level: 85 }
       ]
     }
   ];

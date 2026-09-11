@@ -61,11 +61,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-slate-500 text-sm">Location</p>
-                    <p className="text-slate-50 font-medium">India</p>
+                    <p className="text-slate-50 font-medium">Pune, India</p>
                   </div>
                 </div>
 
-                <a href="tel:7030027961" className="flex items-center space-x-4 group">
+                <a href="tel:+917030027961" className="flex items-center space-x-4 group">
                   <div className="w-12 h-12 glassmorphism-dark rounded-xl flex items-center justify-center text-accent-400 group-hover:bg-accent-500 group-hover:text-slate-50 transition-all">
                     <span className="font-bold text-xl">#</span>
                   </div>

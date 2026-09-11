@@ -5,8 +5,8 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Hero = () => {
   const roles = [
-    "Aspiring Java Full Stack Developer",
-    "Passionate about Backend & Frontend",
+    "Full Stack Developer",
+    "AI & Systems-Focused Developer",
     "Building Technology for Real-World Impact"
   ];
   
@@ -45,7 +45,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-50">
               Hi, I'm <br />
               <span className="bg-gradient-to-r from-accent-400 via-accent-400 to-accent-400 bg-clip-text text-transparent bg-300% animate-gradient-x">
-                Aaditya Jadhav
+                Aaditya Nitin Jadhav
               </span>
             </h1>
 
@@ -63,7 +63,7 @@ const Hero = () => {
             </div>
 
             <p className="text-slate-400 text-lg max-w-lg leading-relaxed">
-              An Aspiring Java Full Stack Developer focused on building robust, scalable, and user-centric web applications.
+              A Full-Stack and AI / Systems-focused Developer specialized in building robust, scalable, real-time applications and cloud-native solutions.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">

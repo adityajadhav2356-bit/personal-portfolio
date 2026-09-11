@@ -1,22 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 
 const Projects = () => {
   const projects = [
     {
       title: "DigiSaathi",
-      description: "Voice-first digital literacy platform tailored for senior citizens. Features regional language support, guided tutorials, and volunteer assistance to bridge the digital divide.",
+      description: "Built a full-stack digital literacy platform for senior citizens with accessible workflows for UPI payments, WhatsApp, Aadhaar services, and digital safety. Features OTP authentication, multilingual Gemini AI assistance, Web Speech API tutorials, accessibility controls, and fraud alerts.",
       image: "/cool.png",
-      tags: ["React", "Node.js", "Web Speech API", "MongoDB"],
-      live: "https://digisaathi.vercel.app/"
+      tags: ["React 18", "Node.js", "Express.js", "Firebase", "Google Gemini", "Tailwind CSS"],
+      live: "https://digisaathi.vercel.app/",
+      github: "https://github.com/adityajadhav2356-bit/digisaathi"
     },
     {
       title: "RescueLink",
-      description: "Comprehensive disaster management and emergency response platform. Enables real-time assistance, coordination features, and a user-focused responsive interface for critical situations.",
+      description: "Engineered a real-time worker safety platform for hazardous environments with live monitoring and emergency response capabilities. Features WebSocket-based SOS alerts, live geolocation, environmental monitoring, device diagnostics, and worker/supervisor dashboards.",
       image: "/dashboard.png",
-      tags: ["React", "Express", "Socket.io", "Leaflet"],
-      live: "https://rescue-link-sigma.vercel.app/"
+      tags: ["React 19", "Node.js", "Express.js", "MongoDB", "Socket.io", "React Leaflet"],
+      live: "https://rescue-link-sigma.vercel.app/",
+      github: "https://github.com/adityajadhav2356-bit/RescueLink"
+    },
+    {
+      title: "AttendSync",
+      description: "Built a student-teacher assignment scheduling platform that organizes assignment-checking slots and reduces student waiting time for faculty evaluation. Features time-slot allocation, student reservation, teacher availability management, and server-side data handling.",
+      image: "/cool.png",
+      tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Supabase"],
+      live: "",
+      github: "https://github.com/adityajadhav2356-bit/attendsync"
     }
   ];
 
@@ -70,11 +81,19 @@ const Projects = () => {
                       ))}
                     </div>
 
-                    <div className="flex items-center space-x-4 pt-4 border-t border-slate-800">
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-sm text-slate-300 hover:text-slate-50 transition-colors">
-                        <ExternalLink size={18} />
-                        <span>Live Demo</span>
-                      </a>
+                    <div className="flex items-center space-x-6 pt-4 border-t border-slate-800">
+                      {project.live && (
+                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-sm text-slate-300 hover:text-accent-400 transition-colors">
+                          <ExternalLink size={18} />
+                          <span>Live Demo</span>
+                        </a>
+                      )}
+                      {project.github && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-sm text-slate-300 hover:text-accent-400 transition-colors">
+                          <FaGithub size={18} />
+                          <span>GitHub</span>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

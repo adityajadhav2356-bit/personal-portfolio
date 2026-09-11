@@ -8,11 +8,11 @@ const TerminalBio = () => {
 
   const lines = [
     '> Initializing user profile...',
-    '> Fetching data for: Aaditya Jadhav',
-    '> Role: Aspiring Java Full Stack Developer',
+    '> Fetching data for: Aaditya Nitin Jadhav',
+    '> Role: Full Stack & AI Systems Developer',
     '> Loading skills matrix [OK]',
-    '> Compiling backend architecture [OK]',
-    '> Executing frontend interfaces [OK]',
+    '> Compiling backend & cloud services [OK]',
+    '> Executing real-time interfaces [OK]',
     '> System ready. Hello World!'
   ];
 

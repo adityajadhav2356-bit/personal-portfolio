@@ -6,50 +6,66 @@ const Experience = () => {
   const experiences = [
     {
       title: "President",
-      organization: "Association of Computer Engineering Students",
-      date: "Jan 2026 - Jan 2027",
-      description: "Leading the student association, organizing technical events, workshops, and fostering a collaborative environment for computer engineering students.",
+      organization: "Association of Computer Engineering Students (ACES)",
+      date: "Jan 2026 — Present",
+      description: "Led technical and non-technical initiatives for 300+ students, coordinating teams, faculty, logistics, and end-to-end event execution. Managed student activities and technical events while driving student engagement and faculty collaboration.",
       icon: <Users className="text-blue-400" size={20} />
     },
     {
-      title: "Winner (3rd Rank) - Logica 5.0",
-      organization: "National Level Project Competition",
-      date: "March 2026",
+      title: "AI Lead",
+      organization: "Phaiai",
+      date: "Jul 2026 — Present",
+      description: "Lead AI-focused initiatives involving solution design, experimentation, and implementation across technical projects.",
+      icon: <Award className="text-accent-400" size={20} />
+    },
+    {
+      title: "Capgemini Campus Ambassador",
+      organization: "Capgemini",
+      date: "Aug 2026 — Present",
+      description: "Represented Capgemini on campus and coordinated Capgemini Brand Quest 2026, managing student outreach, communication, and event execution.",
+      icon: <Users className="text-green-400" size={20} />
+    },
+    {
+      title: "Institute-Level Winner (2 Consecutive Years)",
+      organization: "Smart India Hackathon (SIH)",
+      date: "2 Consecutive Years",
+      description: "Institute-Level Winner at the Smart India Hackathon for 2 consecutive years, demonstrating strong teamwork, innovation, and capability to build impactful solutions.",
+      icon: <Trophy className="text-yellow-400" size={20} />
+    },
+    {
+      title: "3rd Rank — Logica 5.0",
+      organization: "National Level Project Competition 2026",
+      date: "2026",
       description: "Secured 3rd rank at the national level project competition, showcasing innovative problem-solving and technical skills.",
       icon: <Trophy className="text-yellow-400" size={20} />
     },
     {
-      title: "Institute Level Winner",
-      organization: "Smart India Hackathon (SIH)",
-      date: "November 2025",
-      description: "Cleared the institute-level Smart India Hackathon, demonstrating strong teamwork and capability to build impactful solutions.",
-      icon: <Award className="text-accent-400" size={20} />
-    },
-    {
-      title: "Contributor and Ambassador",
-      organization: "GirlScript Summer of Code",
+      title: "Nominee — Z Skill Up Award",
+      organization: "Z Skill Institute",
       date: "2026",
-      description: "Contributed to open-source projects and served as an ambassador, promoting open-source contribution and guiding new developers.",
+      description: "Nominated for the prestigious Z Skill Up Award by Z Skill Institute for dedication to continuous skill building.",
       icon: <Award className="text-orange-400" size={20} />
     },
     {
-      title: "Campus Ambassador",
-      organization: "Indian Open Source Community (IOC)",
-      date: "2026",
-      description: "Represented IOC on campus, organized open-source awareness sessions, and encouraged student participation in collaborative open-source development.",
-      icon: <Users className="text-green-400" size={20} />
+      title: "Google Cloud Arcade 2024",
+      organization: "Google Cloud Certification",
+      date: "2024",
+      description: "Completed hands-on labs covering Google Cloud infrastructure, deployment, and cloud services.",
+      icon: <Award className="text-blue-400" size={20} />
     },
     {
-      title: "PR Lead",
-      organization: "GeeksforGeeks RSCOE",
-      description: "Leading public relations efforts, increasing chapter visibility, and managing communications for technical events and coding competitions.",
-      icon: <Users className="text-pink-400" size={20} />
-    },
-    {
-      title: "PR Coordinator",
-      organization: "Google Developer Group (GDG) on Campus RSCOE",
-      description: "Coordinating public relations and outreach strategies to build a strong community of developers and tech enthusiasts.",
+      title: "B.Tech in Computer Science Engineering",
+      organization: "JSPM's Rajarshi Shahu College of Engineering",
+      date: "2024 — Present",
+      description: "Pursuing Bachelor of Technology in Computer Science Engineering with a focus on Full Stack and AI Systems.",
       icon: <Users className="text-accent-400" size={20} />
+    },
+    {
+      title: "Higher Secondary (12th) — 83%",
+      organization: "RJSPM's Dnyanbhakti Junior College",
+      date: "2023 — 2024",
+      description: "Completed Higher Secondary Certificate with 83% distinction in Science & Computer Science.",
+      icon: <Award className="text-pink-400" size={20} />
     }
   ];
 
